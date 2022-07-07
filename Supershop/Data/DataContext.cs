@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Supershop.Data.Entities;
+using System;
+using System.Threading.Tasks;
 
 namespace Supershop.Data
 {
@@ -9,6 +11,11 @@ namespace Supershop.Data
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         { 
+        }
+
+        internal Task SaveAllAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }
